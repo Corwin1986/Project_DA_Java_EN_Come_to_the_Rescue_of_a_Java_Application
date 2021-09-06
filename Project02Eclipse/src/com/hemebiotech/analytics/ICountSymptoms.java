@@ -13,7 +13,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 /**
- * description de l'interface
+ * Anything that will counts the number of occurrences per symptom
+ * this interface create a map with string and integer for counting
  * @author uguza
  *
  */

@@ -14,7 +14,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 /**
- * 
+ * Simple brute force implementation
+ *
  * @author uguza
  *
  */
@@ -24,29 +25,28 @@ public class SymptomsWriter implements ISymptomsWriter{
 	public void writeSymptoms(Map<String, Integer> symptomTable) throws IOException {
 		// TODO Auto-generated method stub
 		List<String> keys= new ArrayList<String> (symptomTable.keySet());
-		//7 récupérer liste des clées de symptomTable
-	    //8 Trié la liste par ordre alphabétique
+		//7 retrieve the list of keys from symptomTable
+	    //8 Sort the list alphabetically
 				
 				Collections.sort(keys);
 				
-		//9 Créer le fichier result.out avec BufferedWritter
+		//9 Create the result.out file with BufferedWritter
 				
 		        BufferedWriter writer = new BufferedWriter (new FileWriter("results.out"));
 		        writer.write("");;
 		
-		//10 récupérer les valeurs des symptoms triés avec for
+		//10 retrieve the values â€‹â€‹of the symptoms sorted with for
 		
 		       for (String symptomTrie : keys) {
 				Integer symptomTrieValue= symptomTable.get(symptomTrie);
 				
 				String resultat= symptomTrie+"="+symptomTrieValue;
 				
-		// 11 écrire le résultat dans le fichier results.out
+		// 11 write the result in the result.out file results.out
 				
 				writer.append(resultat);
 				writer.newLine();
 		       }
-		//12 écrire le fichier final
 				writer.close();
 	}
 	

@@ -14,7 +14,8 @@ import java.util.Set;
 import java.util.TreeMap;
 
 /**
- * description géneral de la classe
+ * Simple brute force implementation
+ *
  * @author uguza
  *
  */
@@ -24,21 +25,21 @@ import java.util.TreeMap;
 	public Map<String, Integer> symptomsCounter(List<String> symptomList) {
 		
 		
-	    // 3 entrée une liste de symptoms en créant une Hashmap avec des clées (nom des symptoms) et valeurs
+	    // 3 enter a list of symptoms by creating a Hashmap with keys (name of symptoms) and values
 	 		
 				Map <String,Integer> symptomTable=new HashMap<>();
 				
-		//4 parcourir les symptoms de symptomList avec une boucle for
+		//4 browse symptoms of symptomList with for
 				
 				for(String symptom : symptomList) {
 					
-		//5 si symptom n'éxiste pas dans le tableau l'ajouter avec la valeur 1
+		//5 if symptom does not exist in the table add it with the value 1
 					
 					if (symptomTable.containsKey(symptom)==false) {
 						symptomTable.put(symptom,1);
 					}
 					
-		//6 sinon, incrémenter de 1 la valeur existante 
+		//6 else, increase the existing value by 1
 					
 					else { 
 						//Integer freqExistanteSymp = symptomTable.get(symptom);
