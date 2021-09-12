@@ -12,18 +12,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+
 /**
- * Anything that will counts the number of occurrences per symptom
- * this interface create a map with string and integer for counting
+ * Anything that will counts the number of occurrences per symptom this
+ * interface create a map with string and integer for counting
+ * 
  * @author uguza
  *
  */
 public interface ICountSymptoms {
 	/**
-	 *  description de la méthode
-	 * @param symptomList liste de string 
-	 * @return type de return map avec les valeurs (string et integer)
+	 * creation of a map with strings and integers to count the number of
+	 * repetitions by symptom
+	 * 
+	 * @param symptomList string
+	 * @return type of return, map with value (string and integer)
 	 */
-	Map <String,Integer> symptomsCounter(List<String> symptomList);
+	Map<String, Integer> symptomsCounter(List<String> symptomList);
 
 }

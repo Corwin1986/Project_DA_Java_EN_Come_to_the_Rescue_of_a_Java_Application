@@ -26,7 +26,7 @@ public class AnalyticsCounter {
 	 * @param args Array of Strings
 	 * @throws Exception generate exception
 	 */
-	public static void main(String args[])throws Exception {
+	public static void main(String args[]){
 		/* instantiate an object named symptomReader of type ReadsymptomDataFromFile
 		 * use a constructor that allows reading from a path
 		 */

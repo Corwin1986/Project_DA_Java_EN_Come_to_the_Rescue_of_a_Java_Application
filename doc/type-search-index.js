@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.hemebiotech.analytics","l":"ISymptomsWriter"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.hemebiotech.analytics","l":"AnalyticsCounter"}];updateSearchResults();

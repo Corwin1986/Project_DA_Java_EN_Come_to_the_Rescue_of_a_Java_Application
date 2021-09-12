@@ -13,42 +13,55 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+
 /**
  * Simple brute force implementation
  *
  * @author uguza
  *
  */
-public class SymptomsWriter implements ISymptomsWriter{
+public class SymptomsWriter implements ISymptomsWriter {
 
 	@Override
-	public void writeSymptoms(Map<String, Integer> symptomTable) throws IOException {
+	public void writeSymptoms(Map<String, Integer> symptomTable) {
 		// TODO Auto-generated method stub
-		List<String> keys= new ArrayList<String> (symptomTable.keySet());
-		//7 retrieve the list of keys from symptomTable
-	    //8 Sort the list alphabetically
-				
-				Collections.sort(keys);
-				
-		//9 Create the result.out file with BufferedWritter
-				
-		        BufferedWriter writer = new BufferedWriter (new FileWriter("results.out"));
-		        writer.write("");;
-		
-		//10 retrieve the values ​​of the symptoms sorted with for
-		
-		       for (String symptomTrie : keys) {
-				Integer symptomTrieValue= symptomTable.get(symptomTrie);
-				
-				String resultat= symptomTrie+"="+symptomTrieValue;
-				
-		// 11 write the result in the result.out file results.out
-				
+		List<String> keys = new ArrayList<String>(symptomTable.keySet());
+		// 7 retrieve the list of keys from symptomTable
+		// 8 Sort the list alphabetically
+
+		Collections.sort(keys);
+
+		// 9 Create the result.out file with BufferedWritter
+		BufferedWriter writer = null;
+		try {
+			writer = new BufferedWriter(new FileWriter("results.out"));
+			writer.write("");
+			;
+
+			// 10 retrieve the values ​​of the symptoms sorted with for
+
+			for (String symptomTrie : keys) {
+				Integer symptomTrieValue = symptomTable.get(symptomTrie);
+
+				String resultat = symptomTrie + "=" + symptomTrieValue;
+
+				// 11 write the result in the result.out file results.out
+
 				writer.append(resultat);
 				writer.newLine();
-		       }
-				writer.close();
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (writer != null) {
+				try {
+					writer.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
-	
-	
+
 }
